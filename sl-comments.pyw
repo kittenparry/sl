@@ -96,9 +96,7 @@ def log_record(entry):
 		# append it to the log file
 		log = get_time() + '| ' + str(entry).strip() + '\n'
 
-		# REPLACE WITH BELOW LINE FOR UTF-8 ENCODING
-		#with open(log_path, 'a', encoding='utf-8') as f:
-		with open(log_path, 'a') as f:
+		with open(log_path, 'a', encoding='utf-8') as f:
 			f.write(log)
 	except IOError as e:
 		print(e)

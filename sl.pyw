@@ -67,7 +67,7 @@ def log_record(entry):
 		log_path = os.path.join(path, file)
 
 		log = get_time() + '| ' + str(entry).strip() + '\n'
-		with open(log_path, 'a') as f:
+		with open(log_path, 'a', encoding='utf-8') as f:
 			f.write(log)
 	except IOError as e:
 		print(e)
